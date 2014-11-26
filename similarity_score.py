@@ -55,21 +55,15 @@ def compare(doc1,doc2):
     #print  key_idx
     v1=doc_vec(doc1,key_idx)
     v2=doc_vec(doc2,key_idx)
-    print v1
+    #print v1
     #print "\n"
-    print v2
+    #print v2
     return float(dot(v1,v2) / (norm(v1) * norm(v2)))
  
  
-if __name__ == '__main__':
-    print "Running Test..."
-    doc = dict()
-    i = 0 
-    for line in  open("original_result"):
-	doc[i] = line
-        i += 1
-
-    for i in range(0, len(doc)):
-	print i 
-	print doc[i]
-    print "Similarity %s" % compare(doc[5],doc[1])
+#if __name__ == '__main__':
+   # print "Running Test..." 
+   # doc1="I like to eat eat chicken chicken noodle soup."
+   # doc2="I have read the book \"Chicken noodle soup for the soul\"."
+   # print "Using Doc1: %s\n\nUsing Doc2: %s\n" % ( doc1, doc2 )
+   # print "Similarity %s" % compare(doc1,doc2)

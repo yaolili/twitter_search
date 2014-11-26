@@ -49,9 +49,9 @@ def clustering(graph, document_id, clustering_array):
 				#print  i ,j 
 				graph[i].remove(j)
 				#print graph 
-        # to make the first element is the star center
-	graph[document_id].reverse()
-	clustering_array.append(graph[document_id])
+        # to make the first element is star center
+        graph[document_id].reverse()
+        clustering_array.append(graph[document_id])
 	for i in want_clustered_list: del graph[i]
 	return 1 
 
@@ -73,7 +73,6 @@ def star_clustering_result(document_number,score):
   	
 	while (not is_all_marked(clustering_result, len(original_graph))):
 		Id = max_degree(graph)
-		print Id
 		clustering(graph,Id,clustering_result)
 		#print '----after clustering-----'
 		#print 'clustering_result'
